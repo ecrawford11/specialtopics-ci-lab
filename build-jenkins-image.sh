@@ -1,4 +1,4 @@
 
 cd docker/
 
-docker build -t edu.cscc.special-topics/jenkins .
+docker build edu.cscc.special-topics/jenkins .
