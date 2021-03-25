@@ -14,4 +14,11 @@ node {
 
   }
   // you should add a test report here
+  try {
+          stage('Test') {
+         sh "mvn package"
+          }
+      } finally {
+          junit 'build/reports/**/*.xml'
+      }
 }
