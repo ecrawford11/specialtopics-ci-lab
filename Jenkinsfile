@@ -5,17 +5,18 @@ node {
         git url: 'https://github.com/ecrawford11/specialtopics-ci-lab'
   }
 
-  stage('Build') {
+    stage('Build') {
     // you should build this repo with a maven build step here
- try {    withMaven (maven: 'maven3') {
+    try {
+    withMaven (maven: 'maven3') {
              sh "mvn package"
            }
 
           }
-      } finally {
+       finally {
           junit 'build/reports/**/*.xml'
       }
-    echo "hello"
+
 
   }
   // you should add a test report here
