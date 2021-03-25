@@ -14,7 +14,7 @@ node {
 
           }
        finally {
-          junit 'build/reports/**/*.xml'
+          junit 'target/**/*.xml'
       }
 
 
